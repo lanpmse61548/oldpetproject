@@ -1,0 +1,23 @@
+
+
+  <div class="inline" *ngFor="let img of imgViewList" >
+    <div class="floating-box">
+    <div (click)="removeOldImg(img);">X</div>
+        <img [src]="img" >
+    </div>
+ </div>
+ <div class="inline" *ngFor="let img of urls" ><div class="floating-box">
+    <div (click)="removeImg(img.num);">X</div>
+    
+    <img [src]="img.url" >
+</div>
+</div> 
+<br style="clear:both" />
+<div *ngIf="isMulti">
+<div class="inputWrapper">   
+<input id="ful2" class="ful2" type="file" (change)="fileChange($event)" multiple placeholder="Upload file" accept=".jpg,.jpeg,.doc,.docx">
+</div>
+<button class="submitButton" (click)="abort()">abort</button>
+
+</div>
+

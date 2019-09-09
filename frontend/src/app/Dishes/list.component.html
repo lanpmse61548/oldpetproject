@@ -1,0 +1,31 @@
+<h1>{{title}}</h1>
+
+<button  class="submitButton" (click)="login('admin2','111');">Login</button>
+<button  class="submitButton" (click)="logout();">Logout</button>
+<!-- <button  class="submitButton"(click)="search();">Search</button> -->
+<br>
+<br>Username:
+<input  [(ngModel)]="username" />
+<br>
+<br>Password:
+<input   [(ngModel)]="password" />
+
+<!-- <button  class="submitButton"
+[routerLink]="['/detail']" >New</button> -->
+<!-- <ul class="dishes">
+  <div *ngFor="let dish of dishes" [routerLink]="['/detail', dish.id]" 
+   
+    >
+    <div class="floating-box">
+    <div>
+    <span>{{dish.name}}</span>
+    
+    <button class="delete"  
+    (click)="delete(dish); $event.stopPropagation()">x</button>
+    </div>
+    <img   src={{dish.imagePath}}/>
+  </div>
+</div>
+
+  
+</ul> -->

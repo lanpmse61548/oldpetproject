@@ -1,0 +1,18 @@
+
+  .floating-box {
+    float: left;
+    width: 450px;
+    height: 300px;
+    margin: 10px;
+    border: 3px solid #73AD21;  
+}
+  
+
+
+  img {
+   
+    width: 100%;
+     max-height: 80%;
+     
+ }
+ 

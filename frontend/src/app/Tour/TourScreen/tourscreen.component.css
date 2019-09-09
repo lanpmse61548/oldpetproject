@@ -1,0 +1,119 @@
+
+
+
+:host ::ng-deep .imgContainerDiv{
+    width: 50%;
+    margin: auto;
+    height: 500px;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+}
+:host ::ng-deep .mat-dialog-container{
+  background-color: black;
+}
+
+/* Next & previous buttons */
+:host ::ng-deep  .prev {
+  
+  font-weight: bold;
+  cursor: pointer;
+   position: absolute; 
+   padding: 16px;
+   margin-top: -22px;
+   color: white;
+   font-weight: bold;
+   font-size: 30px;
+   bottom: 50%;
+   transition: 0.6s ease;
+   /* bottom: 150px;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0; */
+
+  }
+  
+  /* Next & previous buttons */
+:host ::ng-deep  .next {
+  font-weight: bold;
+  right: 0;
+  bottom: 50%;
+  cursor: pointer;
+  position: absolute; 
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  transition: all 2s linear;
+  font-size: 30px;
+  transition: 0.6s ease;
+  /* bottom: 150px;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+   float: right; */
+ 
+  }
+
+  :host ::ng-deep  .slideImg{
+    
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+  }
+
+
+
+
+  :host ::ng-deep .containerWrap{
+    
+    background-color: black;
+  }
+  /* Position the "next button" to the right */
+  /* :host ::ng-deep  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  } */
+  
+  /* On hover, add a black background color with a little bit see-through */
+  :host ::ng-deep  .prev:hover {
+    float: left;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  :host ::ng-deep  .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+
+
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }

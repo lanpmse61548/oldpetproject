@@ -1,0 +1,65 @@
+<div *ngIf="dish">
+<div>
+<div>
+  <file-uploader [oldImgList] = "oldImgList" (onFileUpload)="updateFile($event)"  (onOldFileDelete)="deleteOldFile($event)"></file-uploader>
+</div> 
+
+<div id="wrap">
+  <label>name: </label>
+  <input [(ngModel)]="dish.name" placeholder="name" /><br>
+    <button  class="submitButton" (click)="goBack()">Back</button>
+    <button  class="submitButton" (click)="save()">Save</button>
+    </div>
+
+    <div>
+        <input  size="10"  [(ngModel)]="style" />
+        <textarea rows="4" cols="50"  [(ngModel)]="content" ></textarea>
+        <button class="submitButton" (click)="addNewElement()">Add</button>
+        <button class="submitButton" (click)="addImage()">Image</button>
+   </div>
+
+
+      
+      <div class="inline" *ngFor="let element of elementList" >
+        <div *ngIf="element.style=='bold'" >
+          <input  size="10" class="bold" [(ngModel)]="element.content" />
+          <button>X</button>
+        </div>
+       
+        <div *ngIf="element.style=='normal'" >
+            <textarea rows="4" cols="50"  [(ngModel)]="element.content" ></textarea>
+         <button>X</button>
+       </div>
+
+       <div *ngIf="element.style=='image'" >
+          <file-uploader [oldImgList] = "oldImgList" (onFileUpload)="updateFileForPage($event,element.id)"  (onOldFileDelete)="deleteOldFileForPage($event,element.id)"></file-uploader>
+       <button>X</button>
+     </div>
+
+     </div>
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+     <div class="inline" *ngFor="let element of elementList" >
+        <div *ngIf="element.style=='bold'" >
+          <font  size="3" class="bold">{{element.content}}</font>
+        </div>
+       
+        <div *ngIf="element.style=='normal'" >
+        <p   *ngFor="let row of element.contentArr" size="3"  >{{row}}</p>
+        </div>
+
+        <div *ngIf="element.style=='image'" >
+        <div class="inline" *ngFor="let img of element.fileWrapperList" ><div class="floating-box">
+            <div (click)="removeImg(img.num);">X</div>
+            
+            <img [src]="img.url" >
+        </div>
+        </div> 
+     </div>
+     </div>
+ </div>
+ 
+
+</div>
+		

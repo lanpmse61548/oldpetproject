@@ -1,0 +1,22 @@
+
+<style>
+.imgbtn{
+    width: 10px;
+    height: 10px;
+   
+    background-color: blue;
+}
+.gg{
+    border-style: solid;
+    border-color: coral;
+}
+
+</style>
+<input id="ful2" class="ful2" type="file" (change)="fileChange($event)" multiple  accept=".jpg,.jpeg,.doc,.docx">
+
+<button (click)="bold()" ><b>B</b></button>
+<button (click)="addImg()" >Img</button>
+<button (click)="create()" >save</button>
+<div   #content id="content" contenteditable="true">
+
+</div>

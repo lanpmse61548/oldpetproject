@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <style>
+* {
+margin: 0;
+padding: 0;
+
+
+}
+.submitButton{
+   
+   border: none;
+   outline:none;
+   border-radius: 7px;
+   background-color :	#0080ff;
+   box-shadow: 2px 2px 2px #888888;
+   height : 30px;
+   width : 70px;
+   color : white;
+}
+.submitButton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.8s;
+}
+
+.submitButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submitButton:hover {background-color: #3399ff;
+ padding-right: 15px;}
+
+.submitButton:active {
+  background-color: #3399ff;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+    </style>
+   
+  <meta charset="utf-8">
+  <title>MyApp</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
